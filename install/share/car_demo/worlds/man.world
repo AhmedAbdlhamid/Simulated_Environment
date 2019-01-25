@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <actor name="actor">
+      <plugin name="actor_collisions_plugin" filename="libActorCollisionsPlugin.so">
+        <scaling collision="LHipJoint_LeftUpLeg_collision" scale="0.01 0.001 0.001"/>
+        <scaling collision="LeftUpLeg_LeftLeg_collision" scale="8.0 8.0 1.0"/>
+        <scaling collision="LeftLeg_LeftFoot_collision" scale=" 8.0 8.0 1.0 "/>
+      </plugin>
+      <skin>
+        <filename>walk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop> 
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>10.000000</time>
+            <pose>10 0 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>10.5</time>
+            <pose>11 0 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>11</time>
+            <pose>12 0 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>11.500000</time>
+            <pose>13 0 0 0 0 0</pose>
+          </waypoint>
+
+        </trajectory>
+      </script>
+    </actor>
+  </world>
+</sdf>

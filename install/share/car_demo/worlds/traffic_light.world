@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+
+
+<sdf version="1.6">
+  <world name="default">
+    <gui>
+     <camera name="user_camera">
+       <pose>-49.08 -1.911 6.95 0 0 -0.0159</pose>
+     </camera>
+     <plugin name="keyboard" filename="libKeyboardGUIPlugin.so">
+     </plugin>
+     <plugin name="TrafficLights" filename="libTrafficLightsGUIPlugin.so">
+
+       <!-- Q -->
+       <key value="113" model="stop_light_post_474" color="red"/>
+   
+
+       <!-- A -->
+       <key value="97" model="stop_light_post_474" color="green"/>
+
+       <!-- W -->
+       <key value="119" model="stop_light_post_474" color="yellow"/>
+     </plugin>
+    </gui>
+
+
+    <include>
+      <name>stop_light_post_474</name>
+      <pose>
+      -41.3
+      -48.7
+      5.01
+      0
+      0
+      -1.57
+      </pose>
+      <uri>model://stop_light_post</uri>
+    </include>
+
+   
+  </world>
+</sdf>

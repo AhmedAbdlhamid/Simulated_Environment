@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+         <uri>model://ground_plane</uri>
+      </include>
+    <actor name="talkingA">
+        <!-- Starting pose -->
+        <pose>0 0 0 0 0 0</pose>
+        <skin>
+          <filename>SKIN_man_blue_shirt.dae</filename>
+        </skin>
+        <animation name="animation">
+          <filename>ANIMATION_talking_a.dae</filename>
+          
+        </animation>
+          <script>
+            <trajectory id="0" type="animation">
+              
+                <waypoint>
+                  <time>0</time>
+                  <pose>0 0 0 0 0 0</pose>
+                </waypoint>
+              
+                <waypoint>
+                  <time>100</time>
+                  <pose>0 0 0 0 0 0</pose>
+                </waypoint>
+              
+            </trajectory>
+          </script>
+      </actor>
+    
+      <actor name="talkingB">
+        <!-- Starting pose -->
+        <pose>0 0 0 0 0 0</pose>
+        <skin>
+          <filename>SKIN_man_green_shirt.dae</filename>
+        </skin>
+        <animation name="animation">
+          <filename>ANIMATION_talking_b.dae</filename>
+          
+        </animation>
+          <script>
+            <trajectory id="0" type="animation">
+              
+                <waypoint>
+                  <time>0</time>
+                  <pose>0 0 0 0 0 0</pose>
+                </waypoint>
+              
+                <waypoint>
+                  <time>100</time>
+                  <pose>0 0 0 0 0 0</pose>
+                </waypoint>
+              
+            </trajectory>
+          </script>
+      </actor>
+  </world>
+</sdf>
